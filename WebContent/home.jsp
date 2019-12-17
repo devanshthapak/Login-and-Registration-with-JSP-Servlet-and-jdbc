@@ -8,8 +8,12 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-	<div class="alert alert-primary" role="alert">
-  		Successfully Login!!
-	</div>
+<% String user = request.getParameter("user"); %>
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Successfully Login!</strong> Welcome <b><% out.println(user); %> </b>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 </body>
 </html>
