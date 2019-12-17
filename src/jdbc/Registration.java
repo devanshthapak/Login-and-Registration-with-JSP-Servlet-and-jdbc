@@ -44,7 +44,8 @@ public class Registration extends HttpServlet {
 			ps.setString(2, password);
 			ps.executeUpdate();
 			PrintWriter out = response.getWriter();
-			out.println("u have successfully registered");
+//			out.println("u have successfully registered");
+			response.sendRedirect("login.jsp");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

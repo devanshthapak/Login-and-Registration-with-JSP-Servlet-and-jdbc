@@ -52,7 +52,8 @@ public class Login extends HttpServlet {
 				dbPassword = rs.getString("password");
 			}
 			if(name.equals(dbName)&&password.contentEquals(dbPassword)) {
-				out.println("Successfully Login");
+//				out.println("Successfully Login");
+				response.sendRedirect("home.jsp");
 			}
 			else {
 				RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
