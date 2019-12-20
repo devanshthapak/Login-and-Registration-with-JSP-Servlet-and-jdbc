@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,5 +16,18 @@
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
+
+<% String logo = "ACTIVE SHOP";
+ out.println(logo);
+%>
+<br>
+
+Today's date : <%= (new java.util.Date()).toLocaleString() %><br>
+
+<a href="login.jsp">Logout</a>
+
+
+
+
 </body>
 </html>
